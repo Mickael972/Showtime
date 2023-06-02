@@ -12,12 +12,16 @@ export class MovieApiServiceService {
   apikey = "08cc33bd5ae3a747598ce2ad84376e66";
 
   //bannerapidate
-
   bannerApiData():Observable<any>
   {
     return this.http.get(`${this.baseurl}/trending/all/week?api_key=${this.apikey}`);
   }
 
-
+  
+  //trendingmovieapidata
+  trendingMovieApiData():Observable<any>
+  {
+    return this.http.get(`${this.baseurl}/trending/movie/week?api_key=${this.apikey}`); 
+  }
 
 }
